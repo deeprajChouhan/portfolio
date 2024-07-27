@@ -1,0 +1,46 @@
+{
+  "name": "devolin",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.5.3",
+    "@react-three/drei": "^9.85.0",
+    "@react-three/fiber": "^8.14.2",
+    "@sarge/avatar-view": "^0.3.4-rc.0",
+    "drei": "^2.2.21",
+    "drie": "^2.0.0",
+    "lottie-react": "^2.4.0",
+    "overlayscrollbars": "^2.2.1",
+    "overlayscrollbars-react": "^0.5.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-colorful": "^5.6.1",
+    "react-countup": "^6.4.2",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0",
+    "react-slick": "^0.29.0",
+    "react-three-fiber": "^6.0.13",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^10.2.0",
+    "three": "^0.156.1",
+    "valtio": "^1.11.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.5"
+  }
+}
