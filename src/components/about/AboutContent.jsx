@@ -13,9 +13,9 @@ import Avatar from "./Avatar";
 const AboutContent = () => {
   const skills = [
     { label: "Fullstack", percentage: 90 },
-    { label: "Android", percentage: 75 },
-    { label: "UI/UX", percentage: 85 },
-    { label: "Server", percentage: 90 },
+    { label: "Offensive", percentage: 75 },
+    { label: "NEtworking", percentage: 85 },
+    { label: "Server", percentage: 95 },
     { label: "Graphics", percentage: 90 },
     { label: "Content", percentage: 50 },
   ];
@@ -29,11 +29,14 @@ const AboutContent = () => {
               <h2 className="section-title">
                 About <span>Me</span>
               </h2>
-              <p>I'm a Software Engineer</p>
+              <p>I'm a Software Security Engineer</p>
               <p>
-                with a talent for problem-solving and a commitment to
-                innovation. I excel in collaborative environments and thrive on
-                delivering high-quality software solutions.
+              With five years of experience in the software industry, I have honed my skills in various aspects of software development and IT. 
+              My professional journey has equipped me with a solid foundation in coding, system architecture, and project management. Currently,
+               I am further advancing my expertise by pursuing a Master's degree in Applied Cybersecurity,
+                where I am delving into the intricacies of cyber defense, risk management, and digital forensics. 
+                This combination of practical experience and academic growth positions me to tackle the evolving challenges in the cybersecurity landscape effectively.
+              
               </p>
             </div>
           </div>

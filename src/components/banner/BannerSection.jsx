@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
-import { DevolinContext } from "../../context/DevolinContext";
-import Details from "../bannerComponents/details";
-import { Canvas } from "react-three-fiber";
-import { OrbitControls } from "@react-three/drei";
-import Avatar from "../about/Avatar";
+import { DevolinContext } from "../../context/DevolinContext.jsx";
+import Details from "../bannerComponents/Details.jsx";
 
 const BannerSection = () => {
   const {
@@ -57,11 +54,8 @@ const BannerSection = () => {
               <p style={{
                 textAlign: "justify"
               }}>
-              With five years of experience in the software industry, I have honed my skills in various aspects of software development and IT. 
-              My professional journey has equipped me with a solid foundation in coding, system architecture, and project management. Currently,
-               I am further advancing my expertise by pursuing a Master's degree in Applied Cybersecurity,
-                where I am delving into the intricacies of cyber defense, risk management, and digital forensics. 
-                This combination of practical experience and academic growth positions me to tackle the evolving challenges in the cybersecurity landscape effectively.
+                With five years of experience in the software industry, I am now pursuing a Master's in Applied Cybersecurity. My background in software development and current studies in cyber defense equip me to address the dynamic challenges in cybersecurity effectively.
+
               </p>
               <div className="btn-box">
                 <a

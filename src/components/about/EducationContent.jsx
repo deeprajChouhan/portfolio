@@ -38,21 +38,21 @@ const EducationContent = () => {
                 <li>
                 <div className="single-box">
                     <span className="duration">01/2023 - 08/2023</span>
-                    <h3 className="title">Team Lead / Sr. Software Engineer</h3>
+                    <h3 className="title">Team Lead</h3>
                     <p>Transpsot Technologies</p>
                 </div>
                 </li>
                 <li>
                 <div className="single-box">
                     <span className="duration">2021 - 2023</span>
-                    <h3 className="title">Assistant System Engineer</h3>
+                    <h3 className="title">System Engineer</h3>
                     <p>Tata Consultancy Services</p>
                 </div>
                 </li>
                 <li>
                 <div className="single-box">
                     <span className="duration">2019 - 2021</span>
-                    <h3 className="title">Parttime Fullstack Engineer</h3>
+                    <h3 className="title">Fullstack Engineer</h3>
                     <p>Fireblaze Technologies</p>
                 </div>
                 </li>
@@ -66,7 +66,7 @@ const EducationContent = () => {
                 <li>
                 <div className="single-box">
                     <span className="duration">2017 - 2021</span>
-                    <h3 className="title">Freelance Web Developer</h3>
+                    <h3 className="title">Freelance Software Engineer</h3>
                     <p></p>
                 </div>
                 </li>
