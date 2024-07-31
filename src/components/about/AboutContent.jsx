@@ -13,11 +13,11 @@ import Avatar from "./Avatar";
 const AboutContent = () => {
   const skills = [
     { label: "Fullstack", percentage: 90 },
-    { label: "Offensive", percentage: 75 },
-    { label: "NEtworking", percentage: 85 },
+    { label: "Security", percentage: 85 },
+    { label: "NEtworking", percentage: 80 },
     { label: "Server", percentage: 95 },
     { label: "Graphics", percentage: 90 },
-    { label: "Content", percentage: 50 },
+    { label: "Content", percentage: 70 },
   ];
 
   return (
