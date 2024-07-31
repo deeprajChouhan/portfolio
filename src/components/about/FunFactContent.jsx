@@ -27,17 +27,17 @@ const FunFactContent = () => {
                         <div className="single-box single-box-2">
                             <div className="part-icon">
                                 <span>
-                                    <i className="fa-thin fa-users"></i>
-
+                                    
+                                <i className="fa fa-bug"></i>
                                 </span>
                             </div>
                             <h2>
                                 <span className="odometer" data-count="10000">
                                     <CountUp end={10000} />
                                 </span>
-
+                                +
                             </h2>
-                            <p>Best Project Scope</p>
+                            <p>Bugs Fixed</p>
                         </div>
                     </div>
                     <div className="col-md-3 col-6">
@@ -60,17 +60,15 @@ const FunFactContent = () => {
                         <div className="single-box">
                             <div className="part-icon">
                                 <span>
-
-                                    <i className="fa fa-bug"></i>
+                                <i className="fa-thin fa-users"></i>
                                 </span>
                             </div>
                             <h2>
                                 <span className="odometer" data-count="100">
                                     <CountUp end={100} />
                                 </span>
-                                +
                             </h2>
-                            <p>Bugs Fixed</p>
+                            <p>Best Project Scope </p>
                         </div>
                     </div>
 
