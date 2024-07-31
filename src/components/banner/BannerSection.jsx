@@ -50,7 +50,7 @@ const BannerSection = () => {
               <h1>
                 <span>I'm</span> Deepraj Chouhan
               </h1>
-              <h2>Software Security Engineer</h2>
+              <h2>Cybersecurity Engineer</h2>
               <p style={{
                 textAlign: "justify"
               }}>
