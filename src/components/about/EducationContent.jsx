@@ -10,7 +10,7 @@ const EducationContent = () => {
             <ul>
                 <li>
                 <div className="single-box">
-                    <span className="duration">2023 - Present</span>
+                    <span className="duration">2023 - 2024</span>
                     <h3 className="title">Msc Applied Cyber Security</h3>
                     <p>University of South Wales</p>
                 </div>

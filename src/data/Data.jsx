@@ -187,8 +187,17 @@ const portfolioList = [
         id:13,
         imgSrc:'assets/images/portfolio-img-3.jpg',
         category:'AI & ML',
-        intro: 'Investigated critical industry management issues, including potential cyberattacks, incident response techniques, and security solutions, within IoT networks.Conducted seccurity investigations on IoT networks, addressing future cybersecurity issues, supported by the ISO 27035 standard.',
-        title:'Cybersecurity Management and Incident Response in IoT Networks',
+        intro: '"Speak With ME" is an innovative software solution designed to bridge the communication gap for individuals using sign language. By utilizing advanced image recognition and machine learning algorithms, the software translates hand gestures and movements into spoken words in real time. This tool aims to enhance accessibility and foster inclusivity, making it easier for people with hearing or speech impairments to communicate seamlessly with the wider world.',
+        title:'Speak With ME: A software to convert sign language to voice.',
+        startDate:'15/01/2019',
+        endDate:'28/02/2019',
+    },
+    {
+        id:14,
+        imgSrc:'assets/images/portfolio-img-3.jpg',
+        category:'AI & ML',
+        intro: 'Sales AI is a cutting-edge software solution tailored for logistics startups to optimize lead generation and streamline the entire sales cycle. By integrating with the startup website, it captures potential customer leads efficiently and automates the pre- and post-sales process. From initial inquiry to final follow-up, Sales AI enhances customer engagement, reduces manual effort, and ensures a smoother, more efficient sales pipeline, helping businesses close deals faster and more effectively.',
+        title:'Sales AI',
         startDate:'15/01/2023',
         endDate:'28/02/2023',
     },
@@ -254,46 +263,12 @@ const testimonialList = [
 const blogList = [
     {
         id:0,
-        imgSrc:"assets/images/blog-img-1.jpg",
-        title:'Top 10 JavaScript Frameworks to Learn in 2022',
-        author:'Daisy Moore',
-        date:'27 Sep 2022'
+        imgSrc:"assets/blogs/spcms.webp",
+        title:'Secure Encoding Technology for Patient Consent Information within a JPEG Image',
+        author:'Deepraj Chouhan',
+        date:'2nd Sept 2024'
     },
-    {
-        id:1,
-        imgSrc:"assets/images/blog-img-2.jpg",
-        title:'Integrate ReactJS into a legacy Dojo application',
-        author:'Saumya Daga',
-        date:'16 June 2023'
-    },
-    {
-        id:2,
-        imgSrc:"assets/images/blog-img-3.jpg",
-        title:'Go from Markdown to HTML5 with marked-it',
-        author:'Jenifer',
-        date:'16 Aug 2022'
-    },
-    {
-        id:3,
-        imgSrc:"assets/images/blog-img-4.jpg",
-        title:'Bootstrap: Creating Menus, Navbars, and Modals',
-        author:'Daisy Moore',
-        date:'27 Sep 2022'
-    },
-    {
-        id:4,
-        imgSrc:"assets/images/blog-img-5.jpg",
-        title:'GDPR and WordPress: Why You Need to be Concerned',
-        author:'Saumya Daga',
-        date:'16 Aug 2023'
-    },
-    {
-        id:5,
-        imgSrc:"assets/images/blog-img-6.jpg",
-        title:'Web Based CRM Solutions – All You Need to Know',
-        author:'Tarun Gupta',
-        date:'16 Aug 2022'
-    },
+    
 ]
 
 const layoutList = [

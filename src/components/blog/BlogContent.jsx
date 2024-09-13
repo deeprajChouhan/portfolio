@@ -49,7 +49,7 @@ const BlogContent = () => {
                     </div>   
                 ))}
            
-            <div className="col-12">
+            {/* <div className="col-12">
                 <div className="subscribe-wrap">
                 <div className="subscribe">
                     <h3>subscribe my newsletter</h3>
@@ -62,8 +62,8 @@ const BlogContent = () => {
                     </form>
                 </div>
                 </div>
-            </div>
-            {blogList.slice(-3).map((item) => (
+            </div> */}
+            {/* {blogList.slice(-3).map((item) => (
                 <div className="col-lg-4 col-md-6 col-sm-8" key={item.id}>
                     <div className="single-blog">
                     <div className="part-img">
@@ -95,7 +95,7 @@ const BlogContent = () => {
                     </div>
                     </div>
                 </div>   
-            ))}
+            ))} */}
             </div>
         </div>
     </div>

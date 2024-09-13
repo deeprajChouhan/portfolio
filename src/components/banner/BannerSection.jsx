@@ -42,6 +42,7 @@ const BannerSection = () => {
               openServiceSection={openServiceSection}
               openContactSection={openContactSection}
               openPortfolioSection={openPortfolioSection}
+              openBlogSection={openBlogSection}
             />
           </div>
           <div className="col-md-6">

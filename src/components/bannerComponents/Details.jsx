@@ -3,7 +3,8 @@ const Details = ({
   openFaqSection,
   openServiceSection,
   openContactSection,
-  openPortfolioSection 
+  openPortfolioSection,
+  openBlogSection
 }) => {
   return (
     <div className="col-md-6 nav-col">
@@ -62,14 +63,14 @@ const Details = ({
             </a>
           </div>
 
-          {/* <div className="single-item">
+          <div className="single-item">
             <a role="button" className="section-btn" data-section="blog" onClick={openBlogSection}>
             <span className="icon">
               <i className="fa-thin fa-file-pen"></i>
             </span>
-            <span className="txt"></span>
+            <span className="txt">Blogs</span>
             </a>
-          </div> */}
+          </div>
           <div className="single-item">
             <a
               role="button"
@@ -83,19 +84,7 @@ const Details = ({
               <span className="txt">CONTACT</span>
             </a>
           </div>
-          <div className="single-item">
-            <a
-             
-              className="section-btn"
-              data-section="contact"
-              // href="/blog-details"
-            >
-              <span className="icon">
-                {/* <i className="fa-thin fa-book"></i> */}
-              </span>
-              {/* <span className="txt">BLOGS</span> */}
-            </a>
-          </div>
+          
         </div>
       </div>
     </div>
