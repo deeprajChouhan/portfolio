@@ -63,14 +63,14 @@ const Details = ({
             </a>
           </div>
 
-          {/* <div className="single-item">
-            <a role="button" className="section-btn" data-section="blog" onClick={openBlogSection}>
+          <div className="single-item">
+            {/* <a role="button" className="section-btn" data-section="blog" onClick={openBlogSection}>
             <span className="icon">
               <i className="fa-thin fa-file-pen"></i>
             </span>
             <span className="txt">Blogs</span>
-            </a>
-          </div> */}
+            </a> */}
+          </div>
           <div className="single-item">
             <a
               role="button"
