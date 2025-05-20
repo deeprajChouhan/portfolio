@@ -12,7 +12,7 @@ const AboutSection = () => {
       <button className="panel-close-btn" data-close="about" onClick={closeAboutSection}>
         <i className="fa-light fa-xmark"></i>
       </button>
-        <AboutContent/>
+        {/* <AboutContent/> */}
         <EducationContent/>
         <FunFactContent/>
     </OverlayScrollbarsComponent>
