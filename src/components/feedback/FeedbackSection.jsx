@@ -36,13 +36,14 @@ const FeedbackSection = () => {
   }
 
   return (
-    <div className="contact-content">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-xl-6 col-lg-5 text-center">
-            <h2 className="section-title title-center">Share Your <span>Thoughts</span></h2>
-            <p className="mb-4">Your voice helps shape this project. Tell us what you love and what we can do better.</p>
-          </div>
+    <div className="contact">
+      <div className="contact-content">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-5 text-center">
+              <h2 className="section-title title-center">Share Your <span>Thoughts</span></h2>
+              <p className="mb-4">Your voice helps shape this project. Tell us what you love and what we can do better.</p>
+            </div>
         </div>
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-8">
@@ -50,8 +51,10 @@ const FeedbackSection = () => {
               <div className="card-body p-4">
                 <form className="contact-form" onSubmit={handleSubmit}>
                   <div className="form-group">
-                    <label>Your full name</label>
+                    <label htmlFor="feedback-name">Your full name</label>
                     <input
+                      id="feedback-name"
+                      name="name"
                       type="text"
                       value={name}
                       onChange={e => setName(e.target.value)}
@@ -60,15 +63,23 @@ const FeedbackSection = () => {
                     />
                   </div>
                   <div className="form-group">
-                    <label>Type</label>
-                    <select value={type} onChange={e => setType(e.target.value)} required>
+                    <label htmlFor="feedback-type">Type</label>
+                    <select
+                      id="feedback-type"
+                      name="type"
+                      value={type}
+                      onChange={e => setType(e.target.value)}
+                      required
+                    >
                       <option value="feature">Feature</option>
                       <option value="bug">Bug</option>
                     </select>
                   </div>
                   <div className="form-group">
-                    <label>Write your feedback</label>
+                    <label htmlFor="feedback-message">Write your feedback</label>
                     <textarea
+                      id="feedback-message"
+                      name="feedback"
                       value={feedback}
                       onChange={e => setFeedback(e.target.value)}
                       placeholder="Let us know how we can improve..."
@@ -93,6 +104,7 @@ const FeedbackSection = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
