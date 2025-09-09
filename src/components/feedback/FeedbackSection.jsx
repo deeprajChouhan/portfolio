@@ -5,10 +5,14 @@ const FeedbackSection = () => {
   const [type, setType] = useState('feature')
   const [feedback, setFeedback] = useState('')
   const [status, setStatus] = useState('')
+  const [statusType, setStatusType] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('')
+    setStatusType('')
+    setIsSubmitting(true)
     try {
       const token = import.meta.env.VITE_BASEROW_TOKEN
       const typeOption = type === 'bug' ? 'Bug' : 'Feedback'
@@ -23,11 +27,15 @@ const FeedbackSection = () => {
       })
       if (!rowRes.ok) throw new Error('Failed to submit feedback')
       setStatus('Thanks for your feedback!')
+      setStatusType('success')
       setName('')
       setType('feature')
       setFeedback('')
     } catch (err) {
       setStatus(err.message)
+      setStatusType('error')
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -57,8 +65,31 @@ const FeedbackSection = () => {
                 <label>Write your feedback</label>
                 <textarea value={feedback} onChange={e => setFeedback(e.target.value)} required></textarea>
               </div>
-              <button className="def-btn" type="submit">Submit Feedback</button>
-              {status && <p>{status}</p>}
+              <button className="def-btn" type="submit" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <i className="fa-solid fa-spinner fa-spin"></i> Sending...
+                  </>
+                ) : (
+                  'Submit Feedback'
+                )}
+              </button>
+              {status && (
+                <p
+                  className="mt-3"
+                  style={
+                    statusType === 'success'
+                      ? {
+                          background: 'linear-gradient(135deg, #CB26B6, #F8B127)',
+                          WebkitBackgroundClip: 'text',
+                          color: 'transparent'
+                        }
+                      : { color: '#dc3545' }
+                  }
+                >
+                  {status}
+                </p>
+              )}
             </form>
           </div>
         </div>
