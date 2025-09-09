@@ -10,39 +10,16 @@ const FeedbackSection = () => {
     e.preventDefault()
     setStatus('')
     try {
-      const email = import.meta.env.VITE_BASEROW_EMAIL
-      const password = import.meta.env.VITE_BASEROW_PASSWORD
+      const token = import.meta.env.VITE_BASEROW_TOKEN
+      const typeOption = type === 'bug' ? 'Bug' : 'Feedback'
 
-      const authRes = await fetch('https://api.baserow.io/api/user/token-auth/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-      })
-      const authData = await authRes.json()
-      if (!authRes.ok) throw new Error(authData.detail || 'Authentication failed')
-      const token = authData.token
-
-      const dbRes = await fetch('https://api.baserow.io/api/database/databases/', {
-        headers: { Authorization: `Token ${token}` }
-      })
-      const dbData = await dbRes.json()
-      const db = dbData.results.find(d => d.name === 'portfolio')
-      if (!db) throw new Error('Database not found')
-
-      const tableRes = await fetch(`https://api.baserow.io/api/database/tables/database/${db.id}/`, {
-        headers: { Authorization: `Token ${token}` }
-      })
-      const tableData = await tableRes.json()
-      const table = tableData.results.find(t => t.name === 'feedback')
-      if (!table) throw new Error('Table not found')
-
-      const rowRes = await fetch(`https://api.baserow.io/api/database/rows/table/${table.id}/?user_field_names=true`, {
+      const rowRes = await fetch('https://api.baserow.io/api/database/rows/table/668961/?user_field_names=true', {
         method: 'POST',
         headers: {
           Authorization: `Token ${token}`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ Name: name, Type: type, Feedback: feedback })
+        body: JSON.stringify({ Name: name, Type: typeOption, Feedback: feedback })
       })
       if (!rowRes.ok) throw new Error('Failed to submit feedback')
       setStatus('Thanks for your feedback!')
