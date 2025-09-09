@@ -212,7 +212,9 @@ body {
   .contact .contact-content .contact-form .form-group label {
     background: #203255;
     color: #bfbfbf; }
-  .contact .contact-content .contact-form .form-group input, .contact .contact-content .contact-form .form-group textarea {
+  .contact .contact-content .contact-form .form-group input,
+  .contact .contact-content .contact-form .form-group select,
+  .contact .contact-content .contact-form .form-group textarea {
     background: #203255;
     color: #d8d8d8;
     border-color: rgba(255, 255, 255, 0.2); }
