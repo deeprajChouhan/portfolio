@@ -4,11 +4,13 @@ const FeedbackSection = () => {
   const [name, setName] = useState('')
   const [type, setType] = useState('feature')
   const [feedback, setFeedback] = useState('')
-  const [status, setStatus] = useState('')
+  const [status, setStatus] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setStatus('')
+    setStatus(null)
+    setLoading(true)
     try {
       const token = import.meta.env.VITE_BASEROW_TOKEN
       const typeOption = type === 'bug' ? 'Bug' : 'Feedback'
@@ -22,12 +24,14 @@ const FeedbackSection = () => {
         body: JSON.stringify({ Name: name, Type: typeOption, Feedback: feedback })
       })
       if (!rowRes.ok) throw new Error('Failed to submit feedback')
-      setStatus('Thanks for your feedback!')
+      setStatus({ ok: true, message: 'Thanks for your feedback!', feedback })
       setName('')
       setType('feature')
       setFeedback('')
     } catch (err) {
-      setStatus(err.message)
+      setStatus({ ok: false, message: err.message })
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -35,31 +39,57 @@ const FeedbackSection = () => {
     <div className="contact-content">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-xl-6 col-lg-5">
-            <h2 className="section-title title-center">send <span>feedback</span></h2>
+          <div className="col-xl-6 col-lg-5 text-center">
+            <h2 className="section-title title-center">Share Your <span>Thoughts</span></h2>
+            <p className="mb-4">Your voice helps shape this project. Tell us what you love and what we can do better.</p>
           </div>
         </div>
-        <div className="row g-0 justify-content-center">
-          <div className="col-lg-6 col-md-7 col-sm-6">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label>Your full name</label>
-                <input type="text" value={name} onChange={e => setName(e.target.value)} required />
+        <div className="row justify-content-center">
+          <div className="col-lg-6 col-md-8">
+            <div className="card shadow border-0">
+              <div className="card-body p-4">
+                <form className="contact-form" onSubmit={handleSubmit}>
+                  <div className="form-group">
+                    <label>Your full name</label>
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={e => setName(e.target.value)}
+                      placeholder="Jane Doe"
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>Type</label>
+                    <select value={type} onChange={e => setType(e.target.value)} required>
+                      <option value="feature">Feature</option>
+                      <option value="bug">Bug</option>
+                    </select>
+                  </div>
+                  <div className="form-group">
+                    <label>Write your feedback</label>
+                    <textarea
+                      value={feedback}
+                      onChange={e => setFeedback(e.target.value)}
+                      placeholder="Let us know how we can improve..."
+                      required
+                    ></textarea>
+                  </div>
+                  <button className="def-btn w-100" type="submit" disabled={loading}>
+                    {loading ? 'Sending...' : 'Send Feedback'}
+                  </button>
+                  {status && status.ok && (
+                    <div className="alert alert-success text-center mt-3">
+                      <p className="mb-1">{status.message}</p>
+                      <blockquote className="mb-0">{status.feedback}</blockquote>
+                    </div>
+                  )}
+                  {status && status.ok === false && (
+                    <div className="alert alert-danger text-center mt-3">{status.message}</div>
+                  )}
+                </form>
               </div>
-              <div className="form-group">
-                <label>Type</label>
-                <select value={type} onChange={e => setType(e.target.value)} required>
-                  <option value="feature">Feature</option>
-                  <option value="bug">Bug</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label>Write your feedback</label>
-                <textarea value={feedback} onChange={e => setFeedback(e.target.value)} required></textarea>
-              </div>
-              <button className="def-btn" type="submit">Submit Feedback</button>
-              {status && <p>{status}</p>}
-            </form>
+            </div>
           </div>
         </div>
       </div>
