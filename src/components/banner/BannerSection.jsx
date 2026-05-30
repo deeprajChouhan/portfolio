@@ -67,7 +67,7 @@ const BannerSection = () => {
                 >
                   <i className="fa-light fa-user"></i> About Me
                 </a>
-                <a href="https://drive.google.com/file/d/1yZPFxB8DtKA1gzOCxjnKjPlIumxBff_b/view?usp=sharing" className="def-btn" download target="_blank">
+                <a href="https://drive.google.com/file/d/1cUlVwt1R7hCJI71U63SSwDbbmEN2WleE/view?usp=sharing" className="def-btn" download target="_blank">
                   <i className="fa-light fa-file-lines"></i> Download CV
                 </a>
               </div>
