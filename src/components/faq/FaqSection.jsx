@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import FaqContent from "./FaqContent";
+import { useContext } from "react";
+import ResearchPage from "../researchs/ResearchPage";
 import { DevolinContext } from "../../context/DevolinContext";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 
@@ -10,7 +10,7 @@ const FaqSection = () => {
       <button className="panel-close-btn" data-close="faq" onClick={closeFaqSection}>
         <i className="fa-light fa-xmark"></i>
       </button>
-      <FaqContent/>
+      <ResearchPage/>
     </OverlayScrollbarsComponent>
   );
 };
